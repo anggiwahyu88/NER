@@ -45,17 +45,33 @@ def extract_entities(article: Article):
             detail="Article text must not exceed 1,000 characters"
         )
 
-    doc = nlp(text)
+    
+    title_doc = nlp(article.title)
+    body_doc = nlp(article.body)
 
-    entities = [
-        {
-            "text": ent.text,
-            "label": ent.label_,
-            "start": ent.start_char,
-            "end": ent.end_char
-        }
-        for ent in doc.ents
-    ]
+    title_entities = [
+    {
+        "text": ent.text,
+        "label": ent.label_,
+        "start": ent.start_char,
+        "end": ent.end_char
+    }
+    for ent in title_doc.ents
+]
+    
+    offset = len(article.title) + 1
+
+    body_entities = [
+    {
+        "text": ent.text,
+        "label": ent.label_,
+        "start": ent.start_char + offset,
+        "end": ent.end_char + offset
+    }
+    for ent in body_doc.ents
+]
+
+    entities = title_entities + body_entities
 
     return {
         "entities": entities,
