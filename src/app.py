@@ -1,4 +1,6 @@
 
+from html import entities
+
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -45,36 +47,24 @@ def extract_entities(article: Article):
             detail="Article text must not exceed 1,000 characters"
         )
 
-    
-    title_doc = nlp(article.title)
-    body_doc = nlp(article.body)
+    doc = nlp(text)
 
-    title_entities = [
+    entities = [
     {
         "text": ent.text,
         "label": ent.label_,
         "start": ent.start_char,
         "end": ent.end_char
     }
-    for ent in title_doc.ents
+    for ent in doc.ents
 ]
     
-    offset = len(article.title) + 1
-
-    body_entities = [
-    {
-        "text": ent.text,
-        "label": ent.label_,
-        "start": ent.start_char + offset,
-        "end": ent.end_char + offset
-    }
-    for ent in body_doc.ents
-]
-
-    entities = title_entities + body_entities
-
+   
     return {
         "entities": entities,
-        "entity_count": len(entities),
-        "model": "trained_ner"
+        "meta": {
+            "entity_count": len(entities),
+            "model": "trained_ner"
+        }
     }
+
