@@ -142,9 +142,12 @@ function App() {
             <div className="entity-list">
               {entities.map((entity, index) => (
                 <div className="entity" key={`${entity.start}-${index}`}>
-                  <div>
+                  <div className="entity-info"> 
                     <strong>{entity.text}</strong>
-                    <span className="entity-label">{entity.label}</span>
+                    <span
+                      className={`entity-label ${entity.label.toLowerCase()}`}>
+                      {entity.label}
+                    </span>
                   </div>
                   <small>
                     Characters {entity.start}–{entity.end}

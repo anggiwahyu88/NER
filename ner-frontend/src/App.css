@@ -127,14 +127,32 @@ button:disabled {
   overflow-wrap: anywhere;
 }
 
-.entity-label {
-  display: inline-block;
-  margin-top: 6px;
-  padding: 4px 8px;
-  background: #312e81;
-  color: #c7d2fe;
-  border-radius: 5px;
-  font-size: 12px;
+  .entity-label {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 8px;
+    background: #312e81;
+    color: #c7d2fe;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  /* Person: blue */
+.entity-label.person {
+  background: #1e3a8a;
+  color: #bfdbfe;
+}
+
+/* Organization: purple */
+.entity-label.org {
+  background: #581c87;
+  color: #e9d5ff;
+}
+
+/* Location: green */
+.entity-label.loc {
+  background: #14532d;
+  color: #bbf7d0;
 }
 
 .entity small {
@@ -143,6 +161,10 @@ button:disabled {
 }
 * {
   box-sizing: border-box;
+}
+
+.entity-info {
+  text-align: left;
 }
 
 @media (max-width: 500px) {
@@ -187,21 +209,4 @@ button:disabled {
     opacity: 0;
     transform: translateY(-8px);
   }
-}
-/* Person: blue */
-.entity-label.person {
-  background: #1e3a8a;
-  color: #bfdbfe;
-}
-
-/* Organization: purple */
-.entity-label.org {
-  background: #581c87;
-  color: #e9d5ff;
-}
-
-/* Location: green */
-.entity-label.loc {
-  background: #14532d;
-  color: #bbf7d0;
 }
