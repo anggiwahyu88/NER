@@ -77,10 +77,6 @@ NER-main/
 #### 3) Jalankan server pengembang frontend
     npm run dev
 
-### 4. Menjalankan Pengujian Otomatis
-##### Untuk menjalankan seluruh skenario pengujian otomatis, jalankan perintah berikut di folder utama (root) proyek:
-    pytest
-
 ## 🚀 Penggunaan API
 ### 1. Cek Status Server
 #### End Point
