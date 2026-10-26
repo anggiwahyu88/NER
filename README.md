@@ -46,3 +46,24 @@ NER-main/
 └── README.md                        # Dokumentasi Proyek
 ```
 
+##⚙️ Panduan Instalasi
+1. Prasyarat Sistem
+Python 3.10+
+Node.js 18+ & npm
+
+2. Instalasi Backend (FastAPI)
+  1) Buat dan aktifkan virtual environment:
+  # Windows
+    python -m venv venv
+    venv\Scripts\activate
+  # Linux/Mac OS
+    python3 -m venv venv
+    source venv/bin/activate
+
+  2) Install seluruh dependensi backend:
+     pip install -r requirements.txt
+
+  3) Jalankan server backend
+     uvicorn app:app --reload
+
+3. Instalasi Frontend (React + Vite)
