@@ -46,7 +46,7 @@ NER-main/
 └── README.md                        # Dokumentasi Proyek
 ```
 
-##⚙️ Panduan Instalasi
+## ⚙️ Panduan Instalasi
 1. Prasyarat Sistem
 Python 3.10+
 Node.js 18+ & npm
@@ -61,9 +61,12 @@ Node.js 18+ & npm
     source venv/bin/activate
 
   2) Install seluruh dependensi backend:
-     pip install -r requirements.txt
+  # Bash
+    pip install -r requirements.txt
 
-  3) Jalankan server backend
+  4) Jalankan server backend
+  # Bash
      uvicorn app:app --reload
 
 3. Instalasi Frontend (React + Vite)
+   
