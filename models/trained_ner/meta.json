@@ -17,18 +17,22 @@
     "mode":"default"
   },
   "labels":{
+    "entity_ruler":[
+      "ORG"
+    ],
     "ner":[
       "LOC",
       "MISC",
       "ORG",
-      "PER",
-      "PERSON"
+      "PER"
     ]
   },
   "pipeline":[
+    "entity_ruler",
     "ner"
   ],
   "components":[
+    "entity_ruler",
     "ner"
   ],
   "disabled":[

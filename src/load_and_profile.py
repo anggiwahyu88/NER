@@ -1,4 +1,3 @@
-import re
 import json
 from pathlib import Path
 import pandas as pd
@@ -10,6 +9,7 @@ IMPORTANT_COLS = [
     "spokePerson1", "spokePerson2", "spokePerson3"
 ]
 
+
 def clean_outer_quotes(val) -> str:
     """Membersihkan tanda kutip pembungkus di ujung string tanpa merusak kutipan di dalam kalimat."""
     if pd.isna(val):
@@ -20,6 +20,7 @@ def clean_outer_quotes(val) -> str:
     if s.startswith("'"):
         return s[1:].strip()
     return s
+
 
 def load_and_profile_dataset(sample_dir: Path):
     csv_files = sorted(sample_dir.glob("*.csv"))
@@ -60,6 +61,7 @@ def load_and_profile_dataset(sample_dir: Path):
     print("=== LAPORAN PROFILING DATASET ===")
     print(json.dumps(report, indent=2, ensure_ascii=False))
     return raw_df, report
+
 
 if __name__ == "__main__":
     load_and_profile_dataset(SAMPLE_DIR)
