@@ -53,20 +53,31 @@ NER-main/
 
 ### 2. Instalasi Backend (FastAPI)
     1) Buat dan aktifkan virtual environment:
-  #### Windows
+    Windows
     python -m venv venv
     venv\Scripts\activate
-  #### Linux/Mac OS
+    Linux / Mac OS
     python3 -m venv venv
     source venv/bin/activate
 
-  ### 2) Install seluruh dependensi backend:
-  #### Bash
+    2) Install seluruh dependensi backend:
+    Bash
     pip install -r requirements.txt
 
-  4) Jalankan server backend
-  #### Bash
-     uvicorn app:app --reload
+    3) Jalankan server backend
+    Bash
+    uvicorn app:app --reload
 
 ### 3. Instalasi Frontend (React + Vite)
-   
+    1) Masuk ke folder frontend
+    Bash
+    cd ner-frontend
+
+    2) Instal depedensi modul node.js
+    Bash
+    npm install
+
+    3) Jalankan server pengembang frontend
+    Bash
+    npm run dev
+Aplikasi frontend dapat diakses di: http://localhost:5173
