@@ -52,19 +52,20 @@ NER-main/
     Node.js 18+ & npm
 
 ### 2. Instalasi Backend (FastAPI)
-    1) Buat dan aktifkan virtual environment:
+#### 1) Buat dan aktifkan virtual environment:
     Windows
     python -m venv venv
     venv\Scripts\activate
+    
     Linux / Mac OS
     python3 -m venv venv
     source venv/bin/activate
 
-    2) Install seluruh dependensi backend:
+#### 2) Install seluruh dependensi backend:
     Bash
     pip install -r requirements.txt
 
-    3) Jalankan server backend
+#### 3) Jalankan server backend
     Bash
     uvicorn app:app --reload
 
