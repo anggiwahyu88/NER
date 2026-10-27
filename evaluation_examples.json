@@ -1,0 +1,58 @@
+[
+    {
+        "entities": [
+            {
+                "text": "Hong Leong Bank Perluas Layanan Digital\nHong Leong Bank",
+                "label": "ORG",
+                "start": 0,
+                "end": 55
+            },
+            {
+                "text": "Asia Tenggara",
+                "label": "LOC",
+                "start": 114,
+                "end": 127
+            }
+        ],
+        "meta": {
+            "entity_count": 2,
+            "model": "trained_ner"
+        }
+    },
+    {
+        "entities": [
+            {
+                "text": "Đông Nam Á\nMaybank",
+                "label": "PERSON",
+                "start": 24,
+                "end": 42
+            }
+        ],
+        "meta": {
+            "entity_count": 1,
+            "model": "trained_ner"
+        }
+    },
+    {
+        "detail": [
+            {
+                "type": "json_invalid",
+                "loc": [
+                    "body",
+                    0
+                ],
+                "msg": "JSON decode error",
+                "input": {},
+                "ctx": {
+                    "error": "Expecting value"
+                }
+            }
+        ]
+    },
+    {
+        "detail": "Title and body cannot be empty status code: 400"
+    },
+    {
+        "detail": "Article text must not exceed 1000 characters status code: 413"
+    }
+]
