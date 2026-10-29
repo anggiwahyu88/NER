@@ -9,6 +9,10 @@ Proyek ini merupakan sistem ekstraksi entitas (*Named Entity Recognition*) berba
 * **Vicky**: Implementasi Pengujian Otomatis (*Automated Testing*) & Penyusunan Dokumentasi Proyek (`README.md`).
 
 ---
+## 🎥 Video Demo & Penjelasan Model
+Untuk melihat demonstrasi aplikasi secara langsung serta penjelasan detail mengenai arsitektur dan proses pelatihan model NER, silakan akses tautan Google Drive berikut:
+
+🔗 **[Tonton Video Demo & Penjelasan Model di Google Drive](https://drive.google.com/drive/folders/1fvD-BGsp5_bf4bPZF8Q_xWPCtcyxF7IZ?usp=sharing)**
 
 ## 📁 Struktur Direktori Proyek
 
